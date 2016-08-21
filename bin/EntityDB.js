@@ -255,8 +255,8 @@ var EntityDBFunction = function(){
                                   console.log('Err to find oneToMany ' + key + ' to table ' + _annotations.table);
                               }else{
                                   self[key] = entities;
-                                  setImmediate(cb);
                               }
+                              setImmediate(cb);
                           }, key);
                           return;
                      }else

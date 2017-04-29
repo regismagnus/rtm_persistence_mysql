@@ -60,7 +60,8 @@ var EntityDBFunction = function(){
                     }else if(typeof _annotations.entities[_annotations.pk] == 'object'
                         && _annotations.entities[_annotations.pk].entity && !object._refPk){
 
-                        var referencePk = new _annotations.entities[_annotations.pk].entity(_user, _pass, _server);
+                        //var referencePk = new _annotations.entities[_annotations.pk].entity(_user, _pass, _server);
+                        var referencePk = new _annotations.entities[_annotations.pk].entity();
                         for(var i in referencePk.annotations.pk)
                             referencePk[referencePk.annotations.pk[i]] = object._pk[i];
 
@@ -73,9 +74,10 @@ var EntityDBFunction = function(){
                                 this[object._refPk[b]] = object._pk[b];
                             else{
                                 var reference;
-                                if(!this[auxRefPk[0]])
-                                    reference = new _annotations.entities[auxRefPk[0]].entity(_user, _pass, _server);
-                                else
+                                if(!this[auxRefPk[0]]) {
+                                    //reference = new _annotations.entities[auxRefPk[0]].entity(_user, _pass, _server);
+                                    reference = new _annotations.entities[auxRefPk[0]].entity();
+                                }else
                                     reference = this[auxRefPk[0]];
 
                                 reference[auxRefPk[1]] = object._pk[b];
@@ -122,7 +124,8 @@ var EntityDBFunction = function(){
                     && _annotations.entities[i].entity
                     && (typeof object[_annotations.entities[i].name] != 'undefined'
                     || _annotations.entities[i].name instanceof Array)){
-                    var reference = new _annotations.entities[i].entity(_user, _pass, _server);
+                    //var reference = new _annotations.entities[i].entity(_user, _pass, _server);
+                    var reference = new _annotations.entities[i].entity();
 
                     if(this._cache)
                         reference.setCache(this._cache);
@@ -184,7 +187,8 @@ var EntityDBFunction = function(){
                         && item.entity
                         && (typeof object[item.name] != 'undefined'
                         || (item.name instanceof Array && item.type != 'oneToMany'))){
-                        var reference = new item.entity(_user, _pass, _server);
+                        //var reference = new item.entity(_user, _pass, _server);
+                        var reference = new item.entity();
 
                         if(self._cache)
                             reference.setCache(self._cache);
@@ -228,7 +232,8 @@ var EntityDBFunction = function(){
                     }else if(typeof item == 'object' && item.refPk && item.entity && item.type == 'oneToMany'){
                         if(typeof item.entity == 'string')
                             item.entity = require(item.entity);
-                        var reference = new item.entity(_user, _pass, _server);
+                        //var reference = new item.entity(_user, _pass, _server);
+                        var reference = new item.entity();
 
                         if(self._cache)
                             reference.setCache(self._cache);

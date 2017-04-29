@@ -213,7 +213,8 @@ var EntityMySQLFunction = function(){
                 var arrFindAll = [];
                 if(!populate){
                     for(var i in results){
-                        var clone = new classClone(_user, _pass, _server);
+                        //var clone = new classClone(_user, _pass, _server);
+                        var clone = new classClone();
 
                         clone.populate(results[i]);
                         arrFindAll.push(clone);
@@ -222,7 +223,8 @@ var EntityMySQLFunction = function(){
                 }else{
                     async.mapLimit(results, 1,
                         function(item, cb){
-                            var clone = new classClone(_user, _pass, _server);
+                            //var clone = new classClone(_user, _pass, _server);
+                            var clone = new classClone();
 
                             if(self._cache)
                                 clone.setCache(self._cache);

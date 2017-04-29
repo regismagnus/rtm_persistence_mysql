@@ -1,6 +1,6 @@
 {
   "name": "rtm-persistence-mysql",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": true,
   "author": {
     "name": "Regis Magnus",
@@ -16,5 +16,13 @@
     "enum": "2.1.0",
     "jsclass": "4.0.5",
     "mysql": "2.7.0"
-  }
+  },
+  "gitHead": "2e3c8fa7b3be46715ae261d664a3d02af1f09320",
+  "readme": "# rtm_persistence_mysql\r\nFaz persistencia de dados para banco mysql - NODEJS\r\n",
+  "readmeFilename": "README.md",
+  "description": "Faz persistencia de dados para banco mysql - NODEJS",
+  "_id": "rtm-persistence-mysql@0.0.2",
+  "_shasum": "64f8b7e44ff30926216217ccbfa84cbc12b7b620",
+  "_from": "git://github.com/regismagnus/rtm_persistence_mysql.git",
+  "_resolved": "git://github.com/regismagnus/rtm_persistence_mysql.git#2e3c8fa7b3be46715ae261d664a3d02af1f09320"
 }

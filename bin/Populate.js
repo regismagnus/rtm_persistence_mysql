@@ -1,11 +1,11 @@
 var Class = require('jsclass/src/core').Class;
 
 /*
-* @Desc: Adicionar entidades e subEntidades para ser buscada em banco e populada
-* ex: Tenho informações de metodo WebServiceAccess para ser colocada na entidade
-* enviar Populate em EntityDB.populate para carregar subEntidades também caso seja necessario
-* 'webService', { serviceType: null }
-*/
+ * @Desc: Adicionar entidades e subEntidades para ser buscada em banco e populada
+ * ex: Tenho informacoes de ObjectMySQL para ser colocada na entidade
+ * enviar Populate em EntityDB.populate para carregar subEntidades tambï¿½m caso seja necessario
+ * 'ObjectMySQL', { ObjectMySQLSubEntity: null }
+ */
 var Populate = new Class({
     initialize: function() {
         this.entities = {};

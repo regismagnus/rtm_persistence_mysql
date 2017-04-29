@@ -13,6 +13,7 @@ rtmPersistenceMysql.Date = Date;
 * Return class
 */
 exports.EntityGlobalDB = require(path.dirname(__filename) + '/EntityGlobalDB');
+exports.EntityMySQL    = require(path.dirname(__filename) + '/EntityMySQL');
 
 /*
 * Return class
